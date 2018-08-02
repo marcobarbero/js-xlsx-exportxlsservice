@@ -2,7 +2,6 @@
 import { Subject } from 'rxjs/Subject';
 
 import { utils, write, writeFile, read, readFile, WorkBook, WorkSheet, ColInfo } from 'xlsx';
-import { Utilities } from '../utilities';
 
 /**
  * Export array data type.
