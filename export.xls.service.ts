@@ -161,45 +161,7 @@ export class ExportXlsService
             // Read blob array buffer
             reader.readAsArrayBuffer(data);
         });
-    }
-    
-    //#region Questo può essere sostituito da exportDataArrayToXls
-    //public xlsBlobToXls(fileName: string, data: any): Promise<any>
-    //{
-    //    // Questo è ok, salva il file con le celle e i merge
-    //    //// Save WorkBook on file
-    //    //saveAs(data, "Marco.xlsx");
-    //    return new Promise((resolve, reject) =>
-    //    {
-    //        let reader = new FileReader()
-    //        reader.onload = () =>
-    //        {
-    //            // Create the array buffer
-    //            let u8 = new Uint8Array(reader.result);
-    //            let wb: WorkBook = read(u8, { type: 'array' });
-    //            // Get the WorkSheet name
-    //            let wsname: string = wb.SheetNames[0];
-    //            // Get the WorkSheet n
-    //            let ws: WorkSheet = wb.Sheets[wsname];
-    //            // Get object properties
-    //            let propArray = Object.getOwnPropertyNames(ws);
-    //            propArray = propArray.filter(f => !f.match("!"));
-    //            // Get last range element
-    //            let lastElem = propArray[propArray.length - 1];
-    //            // Set the range to write all the cell
-    //            let range: string = "A1:" + lastElem;
-    //            ws["!ref"] = range;
-    //            // Write file
-    //            writeFile(wb, fileName, { bookSST: true });
-    //            // Resolve promise
-    //            resolve();
-    //        };
-
-    //        // Read blob array buffer
-    //        reader.readAsArrayBuffer(data);
-    //    });
-    //}
-    //#endregion
+    }    
 
     /**
      * Exrpot one or more data (xls BLOB data or simple string data) into one xls file (merge the data if there are more than one).
